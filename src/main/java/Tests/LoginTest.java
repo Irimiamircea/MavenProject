@@ -14,13 +14,13 @@ public class LoginTest extends BaseTest {
 	@Test
 	public void loginTest() {
 		
-		
+		//assertTrue(false);
 		MenuPage menu = new MenuPage(driver);
 		menu.navigateTo(menu.contactsLink);
 		menu.navigateTo(menu.loginLink);
 		
 		LoginPage login = new LoginPage(driver);
-		login.loginInApp("TestUser", "12345@67890");
+		login.loginInApp("TestUser1", "12345@67890");
 		
 		assertTrue(login.successMsgisDisplayed());
 	}
