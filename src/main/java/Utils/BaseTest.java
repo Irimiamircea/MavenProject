@@ -24,6 +24,9 @@ import com.google.common.io.Files;
 
 public class BaseTest {
 	public WebDriver driver;
+	public BasePage app;
+	
+	
 	@BeforeClass
 	public void setup() {
 		ChromeOptions chopt = new ChromeOptions();
@@ -32,6 +35,8 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://keybooks.ro/");
+		
+		app = new BasePage();
 	}
 	
 	
