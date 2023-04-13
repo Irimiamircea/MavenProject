@@ -6,6 +6,7 @@ import java.util.List;
 import org.testng.annotations.Test;
 
 import Utils.BaseTest;
+import Utils.Log;
 import pageObjects.ContactPage;
 import pageObjects.MenuPage;
 
@@ -16,6 +17,8 @@ public class IFrameExample extends BaseTest{
 	public void iframeTest() throws InterruptedException {
 		MenuPage menu = new MenuPage(driver);
 		ContactPage contactPage = new ContactPage(driver);
+		
+		Log.info("Test");
 		
 		menu.navigateTo(menu.contactsLink);
 		contactPage.zoomMap(contactPage.zoomOutButton);

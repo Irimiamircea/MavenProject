@@ -2,6 +2,7 @@ package Tests;
 
 
 import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -30,7 +31,7 @@ public class ActionClassExample extends BaseTest{
 		menu.hoverElement(menu.postFormatsLink);
 		menu.navigateTo(menu.postFormatsLink);
 	}
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void sendKeysExample() {
 		PostFormatsPage postFormat = new PostFormatsPage(driver);
 		WebElement searchField = driver.findElement(postFormat.searchField);
